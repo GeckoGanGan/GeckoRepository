@@ -1,0 +1,18 @@
+spring:
+  profiles:
+    active: prod
+server:
+  port: 8081
+debug: true
+#激活profile==prod
+---
+server:
+  port: 8083
+spring:
+  profiles: prod
+---
+server:
+  port: 8082
+spring:
+  profiles: dev
+---

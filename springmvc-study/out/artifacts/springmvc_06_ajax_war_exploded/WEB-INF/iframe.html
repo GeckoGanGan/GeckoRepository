@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>iframe伪造ajax</title>
+  <script>
+    function getUrl(){
+      const url = document.getElementById("url").value;
+      document.getElementById("iframe").src = url;
+    }
+  </script>
+</head>
+<body>
+
+
+<div>
+  <p>请输入url地址:</p>
+  <p>
+    <input type="text" id="url">
+    <input type="button" value="提交" onclick="getUrl()">
+  </p>
+</div>
+
+<div>
+  <iframe id = "iframe" style="width: 400px;height: 300px"></iframe>
+</div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="userDaoImpl" class="com.zhudake.dao.UserDaoImpl"/>
+    <bean id="userDaoImpl1" class="com.zhudake.dao.UserDaoImpl1"/>
+
+    <bean id="userServiceImpl" class="com.zhudake.service.UserServiceImpl">
+        <!--
+        value:简单数据类型
+        ref:引用类型
+        -->
+        <property name="userDao" ref="userDaoImpl"></property>
+    </bean>
+
+</beans>

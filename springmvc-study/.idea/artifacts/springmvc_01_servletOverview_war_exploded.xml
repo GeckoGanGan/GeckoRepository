@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="springmvc-01-servletOverview:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/springmvc_01_servletOverview_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="springmvc-01-servletOverview" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="springmvc-01-servletOverview/web/Web" />
+    </root>
+  </artifact>
+</component>

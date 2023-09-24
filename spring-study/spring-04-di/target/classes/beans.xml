@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="address" class="com.zhudake.pojo.Address">
+        <property name="address" value="贵州"/>
+    </bean>
+    <bean id="student" class="com.zhudake.pojo.Student">
+        <!--常量注入-->
+        <property name="name" value="王麻子"></property>
+
+        <!--引用类型-->
+        <property name="address" ref="address"/>
+
+        <!--数组-->
+        <property name="books">
+            <array>
+                <value>西游记</value>
+                <value>红楼梦</value>
+                <value>水浒传</value>
+                <value>三国演义</value>
+            </array>
+        </property>
+
+        <!--集合-->
+        <property name="hobbies">
+            <list>
+                <value>唱</value>
+                <value>跳</value>
+                <value>rap</value>
+                <value>篮球</value>
+            </list>
+        </property>
+
+        <!--Map-->
+        <property name="card">
+            <map>
+                <entry key="身份证" value="12212123342561"></entry>
+                <entry key="银行卡" value="12123424131324514"></entry>
+            </map>
+        </property>
+
+        <!--set-->
+        <property name="games">
+            <set>
+                <value>地平线</value>
+                <value>极限过度</value>
+                <value>双人成行</value>
+            </set>
+        </property>
+
+        <!--null-->
+        <property name="wife">
+            <null/>
+        </property>
+
+        <!--Properties-->
+        <property name="info">
+            <props>
+                <prop key="学号">2011650132</prop>
+                <prop key="性别">男</prop>
+                <prop key="年龄">18</prop>
+            </props>
+        </property>
+    </bean>
+</beans>

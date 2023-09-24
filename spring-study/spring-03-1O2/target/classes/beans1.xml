@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--第一种方式：通过下标创建-->
+<!--    <bean id="user" class="com.zhudake.pojo.User">
+        <constructor-arg index="0" value="朱大可"></constructor-arg>
+    </bean>-->
+
+
+<!--    &lt;!&ndash;第二种方式，通过参数类型创建&ndash;&gt;
+     <bean id="user" class="com.zhudake.pojo.User">
+        <constructor-arg type="java.lang.String" value="朱大可"></constructor-arg>
+    </bean>-->
+
+    <!--第三种方式，通过参数名创建-->
+    <bean id="user" class="com.zhudake.pojo.User">
+        <constructor-arg name="name" value="朱大可"></constructor-arg>
+    </bean>
+    <alias name="user" alias="user2"></alias>
+
+
+    <!--
+    id:bean的唯一标识符，就是对象的名字，如果没有配置id，name就是默认标识符
+    class:bean的全限定名,=包名+类名
+    name:也是别名，更高级，可以配置多个别名，以分号，空格，逗号隔开即可 name="userT2,u2 u3;u4"
+    -->
+    <bean id="userT" class="com.zhudake.pojo.UserT" name="userT2">
+        <property name="name" value="HHHH"></property>
+    </bean>
+</beans>

@@ -1,0 +1,18 @@
+#配置组件
+student:
+  studentName: 张三
+  age: 20
+  sex: true
+  birth: 2002/01/20
+  teachers:
+    Java: 王老师
+    HTML: 张老师
+    "[C++]": 李老师
+    "[高数]": 赵老师
+  friends:
+    - 小明
+    - 小华
+    - 小红
+  book:
+    bookName: 笑死了
+    author: 哈哈哈
